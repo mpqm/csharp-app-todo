@@ -36,9 +36,10 @@ namespace Todo
 
         private void buttonCategoryFormClose_Click(object sender, EventArgs e)
         {
-            // 부모 폼(TodoForm)에 알림 메시지 표시
+            // 부모 폼(TodoForm) submenu 숨기기
             if (this.ParentForm is TodoForm todoForm)
             {
+                todoForm.hideSubMenu();
                 todoForm.ShowNotification("카테고리 관리 화면이 닫혔습니다.", TodoForm.NotificationType.Information);
             }
             

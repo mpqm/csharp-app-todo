@@ -38,9 +38,9 @@
             this.buttonCategoryFormClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCategoryFormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.buttonCategoryFormClose.ForeColor = System.Drawing.Color.White;
-            this.buttonCategoryFormClose.Location = new System.Drawing.Point(1171, 12);
+            this.buttonCategoryFormClose.Location = new System.Drawing.Point(1192, 12);
             this.buttonCategoryFormClose.Name = "buttonCategoryFormClose";
-            this.buttonCategoryFormClose.Size = new System.Drawing.Size(91, 31);
+            this.buttonCategoryFormClose.Size = new System.Drawing.Size(70, 30);
             this.buttonCategoryFormClose.TabIndex = 0;
             this.buttonCategoryFormClose.Text = "X";
             this.buttonCategoryFormClose.UseVisualStyleBackColor = false;
