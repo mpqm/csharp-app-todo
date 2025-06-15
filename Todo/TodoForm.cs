@@ -134,42 +134,6 @@ namespace Todo
             Error
         }
 
-        // 알림 메시지를 표시하는 메서드
-        public void ShowNotification(string message, NotificationType type = NotificationType.Information)
-        {
-            labelNotification.Text = message;
-            
-            // 알림 유형에 따른 색상 설정
-            switch (type)
-            {
-                case NotificationType.Success:
-                    labelNotification.ForeColor = Color.LightGreen;
-                    break;
-                case NotificationType.Warning:
-                    labelNotification.ForeColor = Color.Yellow;
-                    break;
-                case NotificationType.Error:
-                    labelNotification.ForeColor = Color.Red;
-                    break;
-                default:
-                    labelNotification.ForeColor = Color.White;
-                    break;
-            }
-            
-            // 알림 패널이 보이도록 설정
-            panelNotification.Visible = true;
-            
-            // 타이머를 사용하여 일정 시간 후 알림 숨기기
-            Timer timer = new Timer();
-            timer.Interval = 5000; // 5초 후 사라짐
-            timer.Tick += (sender, e) => {
-                panelNotification.Visible = false;
-                timer.Stop();
-                timer.Dispose();
-            };
-            timer.Start();
-        }
-
         private void buttonSideMenuTasks_Click(object sender, EventArgs e)
         {
             showSubMenu(panelSideSubMenuTasks);
@@ -215,7 +179,6 @@ namespace Todo
         {
             openFormByMenu(new CalendarDailyForm());
             ActivateButton(sender);
-            ShowNotification("캘린더 일일 화면이 열렸습니다.", NotificationType.Success);
         }
 
         // 관리 서브메뉴 버튼 클릭 이벤트
@@ -238,9 +201,6 @@ namespace Todo
         {
             openFormByMenu(new CategoryForm());
             ActivateButton(sender);
-            
-            // 알림 메시지 표시 예제
-            ShowNotification("카테고리 관리 화면이 열렸습니다.", NotificationType.Success);
         }
 
         private void buttonSideMenuRecurrenceRule_Click(object sender, EventArgs e)

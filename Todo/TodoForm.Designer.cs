@@ -30,6 +30,11 @@
         {
             this.panelSideMenu = new System.Windows.Forms.Panel();
             this.panelSideSubMenuManage = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.buttonSideMenuSetting = new System.Windows.Forms.Button();
+            this.buttonSideMenuExport = new System.Windows.Forms.Button();
+            this.buttonSideMenuRecurrenceRule = new System.Windows.Forms.Button();
+            this.buttonSidemenuTag = new System.Windows.Forms.Button();
             this.buttonSideMenuCategory = new System.Windows.Forms.Button();
             this.buttonSideMenuManage = new System.Windows.Forms.Button();
             this.panelSideSubMenuCalender = new System.Windows.Forms.Panel();
@@ -38,6 +43,7 @@
             this.buttonSideMenuDaily = new System.Windows.Forms.Button();
             this.buttonSideMenuCalendar = new System.Windows.Forms.Button();
             this.panelSideSubMenuTasks = new System.Windows.Forms.Panel();
+            this.buttonSideMenuCompletedTask = new System.Windows.Forms.Button();
             this.buttonSideMenuActiveRecuriingTask = new System.Windows.Forms.Button();
             this.buttonSideMenuHighPriorityTask = new System.Windows.Forms.Button();
             this.buttonSideMenuTodayTask = new System.Windows.Forms.Button();
@@ -45,20 +51,11 @@
             this.panelSideMenuOverView = new System.Windows.Forms.Panel();
             this.buttonSideMenuTodo = new System.Windows.Forms.Button();
             this.panelActiveForm = new System.Windows.Forms.Panel();
-            this.panelNotification = new System.Windows.Forms.Panel();
-            this.labelNotification = new System.Windows.Forms.Label();
-            this.buttonSideMenuCompletedTask = new System.Windows.Forms.Button();
-            this.buttonSidemenuTag = new System.Windows.Forms.Button();
-            this.buttonSideMenuRecurrenceRule = new System.Windows.Forms.Button();
-            this.buttonSideMenuExport = new System.Windows.Forms.Button();
-            this.buttonSideMenuSetting = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelSideMenu.SuspendLayout();
             this.panelSideSubMenuManage.SuspendLayout();
             this.panelSideSubMenuCalender.SuspendLayout();
             this.panelSideSubMenuTasks.SuspendLayout();
             this.panelSideMenuOverView.SuspendLayout();
-            this.panelNotification.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelSideMenu
@@ -95,6 +92,78 @@
             this.panelSideSubMenuManage.Name = "panelSideSubMenuManage";
             this.panelSideSubMenuManage.Size = new System.Drawing.Size(282, 250);
             this.panelSideSubMenuManage.TabIndex = 7;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.DarkGray;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(0, 250);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(282, 50);
+            this.button1.TabIndex = 24;
+            this.button1.Text = "Setting";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // buttonSideMenuSetting
+            // 
+            this.buttonSideMenuSetting.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSideMenuSetting.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSideMenuSetting.FlatAppearance.BorderSize = 0;
+            this.buttonSideMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSideMenuSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSideMenuSetting.Location = new System.Drawing.Point(0, 200);
+            this.buttonSideMenuSetting.Name = "buttonSideMenuSetting";
+            this.buttonSideMenuSetting.Size = new System.Drawing.Size(282, 50);
+            this.buttonSideMenuSetting.TabIndex = 23;
+            this.buttonSideMenuSetting.Text = "Setting";
+            this.buttonSideMenuSetting.UseVisualStyleBackColor = false;
+            // 
+            // buttonSideMenuExport
+            // 
+            this.buttonSideMenuExport.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSideMenuExport.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSideMenuExport.FlatAppearance.BorderSize = 0;
+            this.buttonSideMenuExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSideMenuExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSideMenuExport.Location = new System.Drawing.Point(0, 150);
+            this.buttonSideMenuExport.Name = "buttonSideMenuExport";
+            this.buttonSideMenuExport.Size = new System.Drawing.Size(282, 50);
+            this.buttonSideMenuExport.TabIndex = 22;
+            this.buttonSideMenuExport.Text = "Export";
+            this.buttonSideMenuExport.UseVisualStyleBackColor = false;
+            // 
+            // buttonSideMenuRecurrenceRule
+            // 
+            this.buttonSideMenuRecurrenceRule.AutoSize = true;
+            this.buttonSideMenuRecurrenceRule.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSideMenuRecurrenceRule.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSideMenuRecurrenceRule.FlatAppearance.BorderSize = 0;
+            this.buttonSideMenuRecurrenceRule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSideMenuRecurrenceRule.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSideMenuRecurrenceRule.Location = new System.Drawing.Point(0, 100);
+            this.buttonSideMenuRecurrenceRule.Margin = new System.Windows.Forms.Padding(0);
+            this.buttonSideMenuRecurrenceRule.Name = "buttonSideMenuRecurrenceRule";
+            this.buttonSideMenuRecurrenceRule.Size = new System.Drawing.Size(282, 50);
+            this.buttonSideMenuRecurrenceRule.TabIndex = 20;
+            this.buttonSideMenuRecurrenceRule.Text = "Recurrence Rule";
+            this.buttonSideMenuRecurrenceRule.UseVisualStyleBackColor = false;
+            // 
+            // buttonSidemenuTag
+            // 
+            this.buttonSidemenuTag.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSidemenuTag.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSidemenuTag.FlatAppearance.BorderSize = 0;
+            this.buttonSidemenuTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSidemenuTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSidemenuTag.Location = new System.Drawing.Point(0, 50);
+            this.buttonSidemenuTag.Name = "buttonSidemenuTag";
+            this.buttonSidemenuTag.Size = new System.Drawing.Size(282, 50);
+            this.buttonSidemenuTag.TabIndex = 17;
+            this.buttonSidemenuTag.Text = "Tag";
+            this.buttonSidemenuTag.UseVisualStyleBackColor = false;
             // 
             // buttonSideMenuCategory
             // 
@@ -214,6 +283,23 @@
             this.panelSideSubMenuTasks.Size = new System.Drawing.Size(282, 203);
             this.panelSideSubMenuTasks.TabIndex = 3;
             // 
+            // buttonSideMenuCompletedTask
+            // 
+            this.buttonSideMenuCompletedTask.AutoSize = true;
+            this.buttonSideMenuCompletedTask.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSideMenuCompletedTask.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonSideMenuCompletedTask.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonSideMenuCompletedTask.FlatAppearance.BorderSize = 0;
+            this.buttonSideMenuCompletedTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonSideMenuCompletedTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonSideMenuCompletedTask.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSideMenuCompletedTask.Location = new System.Drawing.Point(0, 150);
+            this.buttonSideMenuCompletedTask.Name = "buttonSideMenuCompletedTask";
+            this.buttonSideMenuCompletedTask.Size = new System.Drawing.Size(282, 50);
+            this.buttonSideMenuCompletedTask.TabIndex = 13;
+            this.buttonSideMenuCompletedTask.Text = "Completed Task";
+            this.buttonSideMenuCompletedTask.UseVisualStyleBackColor = false;
+            // 
             // buttonSideMenuActiveRecuriingTask
             // 
             this.buttonSideMenuActiveRecuriingTask.AutoSize = true;
@@ -325,124 +411,12 @@
             this.panelActiveForm.Size = new System.Drawing.Size(1136, 844);
             this.panelActiveForm.TabIndex = 2;
             // 
-            // panelNotification
-            // 
-            this.panelNotification.BackColor = System.Drawing.Color.DarkGray;
-            this.panelNotification.Controls.Add(this.labelNotification);
-            this.panelNotification.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelNotification.Location = new System.Drawing.Point(282, 773);
-            this.panelNotification.Name = "panelNotification";
-            this.panelNotification.Size = new System.Drawing.Size(1136, 71);
-            this.panelNotification.TabIndex = 3;
-            this.panelNotification.Visible = false;
-            // 
-            // labelNotification
-            // 
-            this.labelNotification.AutoSize = true;
-            this.labelNotification.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelNotification.ForeColor = System.Drawing.Color.White;
-            this.labelNotification.Location = new System.Drawing.Point(20, 20);
-            this.labelNotification.Name = "labelNotification";
-            this.labelNotification.Size = new System.Drawing.Size(0, 29);
-            this.labelNotification.TabIndex = 0;
-            // 
-            // buttonSideMenuCompletedTask
-            // 
-            this.buttonSideMenuCompletedTask.AutoSize = true;
-            this.buttonSideMenuCompletedTask.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonSideMenuCompletedTask.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonSideMenuCompletedTask.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSideMenuCompletedTask.FlatAppearance.BorderSize = 0;
-            this.buttonSideMenuCompletedTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSideMenuCompletedTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSideMenuCompletedTask.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSideMenuCompletedTask.Location = new System.Drawing.Point(0, 150);
-            this.buttonSideMenuCompletedTask.Name = "buttonSideMenuCompletedTask";
-            this.buttonSideMenuCompletedTask.Size = new System.Drawing.Size(282, 50);
-            this.buttonSideMenuCompletedTask.TabIndex = 13;
-            this.buttonSideMenuCompletedTask.Text = "Completed Task";
-            this.buttonSideMenuCompletedTask.UseVisualStyleBackColor = false;
-            // 
-            // buttonSidemenuTag
-            // 
-            this.buttonSidemenuTag.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonSidemenuTag.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSidemenuTag.FlatAppearance.BorderSize = 0;
-            this.buttonSidemenuTag.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSidemenuTag.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSidemenuTag.Location = new System.Drawing.Point(0, 50);
-            this.buttonSidemenuTag.Name = "buttonSidemenuTag";
-            this.buttonSidemenuTag.Size = new System.Drawing.Size(282, 50);
-            this.buttonSidemenuTag.TabIndex = 17;
-            this.buttonSidemenuTag.Text = "Tag";
-            this.buttonSidemenuTag.UseVisualStyleBackColor = false;
-            // 
-            // buttonSideMenuRecurrenceRule
-            // 
-            this.buttonSideMenuRecurrenceRule.AutoSize = true;
-            this.buttonSideMenuRecurrenceRule.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonSideMenuRecurrenceRule.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSideMenuRecurrenceRule.FlatAppearance.BorderSize = 0;
-            this.buttonSideMenuRecurrenceRule.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSideMenuRecurrenceRule.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSideMenuRecurrenceRule.Location = new System.Drawing.Point(0, 100);
-            this.buttonSideMenuRecurrenceRule.Margin = new System.Windows.Forms.Padding(0);
-            this.buttonSideMenuRecurrenceRule.Name = "buttonSideMenuRecurrenceRule";
-            this.buttonSideMenuRecurrenceRule.Size = new System.Drawing.Size(282, 50);
-            this.buttonSideMenuRecurrenceRule.TabIndex = 20;
-            this.buttonSideMenuRecurrenceRule.Text = "Recurrence Rule";
-            this.buttonSideMenuRecurrenceRule.UseVisualStyleBackColor = false;
-            // 
-            // buttonSideMenuExport
-            // 
-            this.buttonSideMenuExport.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonSideMenuExport.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSideMenuExport.FlatAppearance.BorderSize = 0;
-            this.buttonSideMenuExport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSideMenuExport.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSideMenuExport.Location = new System.Drawing.Point(0, 150);
-            this.buttonSideMenuExport.Name = "buttonSideMenuExport";
-            this.buttonSideMenuExport.Size = new System.Drawing.Size(282, 50);
-            this.buttonSideMenuExport.TabIndex = 22;
-            this.buttonSideMenuExport.Text = "Export";
-            this.buttonSideMenuExport.UseVisualStyleBackColor = false;
-            // 
-            // buttonSideMenuSetting
-            // 
-            this.buttonSideMenuSetting.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonSideMenuSetting.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonSideMenuSetting.FlatAppearance.BorderSize = 0;
-            this.buttonSideMenuSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonSideMenuSetting.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSideMenuSetting.Location = new System.Drawing.Point(0, 200);
-            this.buttonSideMenuSetting.Name = "buttonSideMenuSetting";
-            this.buttonSideMenuSetting.Size = new System.Drawing.Size(282, 50);
-            this.buttonSideMenuSetting.TabIndex = 23;
-            this.buttonSideMenuSetting.Text = "Setting";
-            this.buttonSideMenuSetting.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkGray;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(0, 250);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(282, 50);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Setting";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
             // TodoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(1418, 844);
-            this.Controls.Add(this.panelNotification);
             this.Controls.Add(this.panelActiveForm);
             this.Controls.Add(this.panelSideMenu);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -456,8 +430,6 @@
             this.panelSideSubMenuTasks.ResumeLayout(false);
             this.panelSideSubMenuTasks.PerformLayout();
             this.panelSideMenuOverView.ResumeLayout(false);
-            this.panelNotification.ResumeLayout(false);
-            this.panelNotification.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -480,8 +452,6 @@
         private System.Windows.Forms.Button buttonSideMenuActiveRecuriingTask;
         private System.Windows.Forms.Button buttonSideMenuHighPriorityTask;
         private System.Windows.Forms.Button buttonSideMenuTodayTask;
-        private System.Windows.Forms.Panel panelNotification;
-        private System.Windows.Forms.Label labelNotification;
         private System.Windows.Forms.Button buttonSideMenuTodo;
         private System.Windows.Forms.Button buttonSideMenuCompletedTask;
         private System.Windows.Forms.Button buttonSidemenuTag;

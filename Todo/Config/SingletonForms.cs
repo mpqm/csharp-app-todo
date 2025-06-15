@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Todo
+namespace Todo.Config
 {
     /// <summary>
     /// 폼들을 싱글톤(Singleton) 방식으로 관리하는 클래스

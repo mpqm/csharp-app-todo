@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using Todo.Config;
+using Todo.DB;
 namespace Todo
 {
     internal static class Program
@@ -20,6 +21,7 @@ namespace Todo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+            DBConnection.Initialize(); // DB 연결 초기화
             Application.Run(Forms.TodoForm);
         }
     }

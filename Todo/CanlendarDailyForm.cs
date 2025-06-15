@@ -38,12 +38,7 @@ namespace todo
         private void buttonCalendarDailyFormClose_Click(object sender, EventArgs e)
         {
             // 부모 폼(TodoForm) submenu 숨기기
-            if (this.ParentForm is TodoForm todoForm)
-            {
-                todoForm.hideSubMenu();
-                todoForm.ShowNotification("캘린더 일일 화면이 닫혔습니다.", TodoForm.NotificationType.Information);
-            }
-
+            if (this.ParentForm is TodoForm todoForm) todoForm.hideSubMenu();
             this.Close();
         }
     }
