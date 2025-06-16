@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Todo.Entity
 {
-    internal class Category
+    public class Category
     {
         public int categoryId { get; set; }           // 카테고리 고유 ID
         public string name { get; set; }              // 카테고리 이름
