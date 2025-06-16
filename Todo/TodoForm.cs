@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using todo;
+using Todo.Entity;
 
 namespace Todo
 {
@@ -193,13 +194,13 @@ namespace Todo
         }
 
         private void buttonSideMenuCategory_Click(object sender, EventArgs e)
-        {
-            OpenFormByMenu(new CategoryForm());
+        {   
             ActivateButton(sender);
         }
 
         private void buttonSideMenuTag_Click(object sender, EventArgs e)
         {
+            OpenFormByMenu(new TagForm());
             ActivateButton(sender);
         }
 

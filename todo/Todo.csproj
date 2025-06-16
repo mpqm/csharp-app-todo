@@ -77,18 +77,18 @@
     <Compile Include="CanlendarDailyForm.Designer.cs">
       <DependentUpon>CanlendarDailyForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="CategoryForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CategoryForm.Designer.cs">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Config\DBConnection.cs" />
     <Compile Include="Config\SingletonForms.cs" />
     <Compile Include="Entity\Category.cs" />
     <Compile Include="Entity\Notification.cs" />
     <Compile Include="Entity\Tag.cs" />
     <Compile Include="Entity\Task.cs" />
+    <Compile Include="TagForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TagForm.Designer.cs">
+      <DependentUpon>TagForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Repository\CategoryRepository.cs" />
     <Compile Include="Repository\NotificationRepository.cs" />
     <Compile Include="Repository\TagRepository.cs" />
@@ -104,8 +104,8 @@
     <EmbeddedResource Include="CanlendarDailyForm.resx">
       <DependentUpon>CanlendarDailyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CategoryForm.resx">
-      <DependentUpon>CategoryForm.cs</DependentUpon>
+    <EmbeddedResource Include="TagForm.resx">
+      <DependentUpon>TagForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

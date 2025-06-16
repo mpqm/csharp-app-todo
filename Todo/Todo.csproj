@@ -89,6 +89,10 @@
     <Compile Include="Entity\Notification.cs" />
     <Compile Include="Entity\Tag.cs" />
     <Compile Include="Entity\Task.cs" />
+    <Compile Include="Repository\CategoryRepository.cs" />
+    <Compile Include="Repository\NotificationRepository.cs" />
+    <Compile Include="Repository\TagRepository.cs" />
+    <Compile Include="Repository\TaskRepository.cs" />
     <Compile Include="TodoForm.cs">
       <SubType>Form</SubType>
     </Compile>

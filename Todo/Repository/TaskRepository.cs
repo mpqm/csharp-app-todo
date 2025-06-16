@@ -7,7 +7,7 @@ namespace Todo.Repository
 {
     public class TaskRepository
     {
-        public List<Task> GetAll()
+        public List<Task> SelectTaskList()
         {
             var tasks = new List<Task>();
             using var conn = DBConnection.GetConnection();
@@ -36,7 +36,7 @@ namespace Todo.Repository
             return tasks;
         }
 
-        public void Insert(Task task)
+        public void InsertTask(Task task)
         {
             using var conn = DBConnection.GetConnection();
             using var cmd = new SQLiteCommand(@"
@@ -59,7 +59,7 @@ namespace Todo.Repository
             cmd.ExecuteNonQuery();
         }
 
-        public void Update(Task task)
+        public void UpdateTask(Task task)
         {
             using var conn = DBConnection.GetConnection();
             using var cmd = new SQLiteCommand(@"
@@ -93,7 +93,7 @@ namespace Todo.Repository
             cmd.ExecuteNonQuery();
         }
 
-        public void Delete(int taskId)
+        public void DeleteTask(int taskId)
         {
             using var conn = DBConnection.GetConnection();
             using var cmd = new SQLiteCommand("DELETE FROM TB_Task WHERE taskId = @taskId", conn);

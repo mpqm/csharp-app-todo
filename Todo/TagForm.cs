@@ -7,24 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Todo;
 
-namespace Todo
+namespace todo
 {
-    public partial class CategoryForm : Form
+    public partial class TagForm : Form
     {
-        public CategoryForm()
+        public TagForm()
         {
             InitializeComponent();
-            this.Resize += CategoryForm_Resize;
-            this.Load += CategoryForm_Load;
+            this.Resize += TagForm_Load;
+            this.Load += TagForm_Resize;
         }
 
-        private void CategoryForm_Load(object sender, EventArgs e)
+        private void TagForm_Load(object sender, EventArgs e)
         {
             UpdateButtonPosition();
         }
 
-        private void CategoryForm_Resize(object sender, EventArgs e)
+        private void TagForm_Resize(object sender, EventArgs e)
         {
             UpdateButtonPosition();
         }

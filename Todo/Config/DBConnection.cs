@@ -72,7 +72,7 @@ namespace Todo.DB
             {
                 var sql = @"
                 -- 🏷️ 태그 테이블: 할 일에 태그를 붙일 때 사용
-                CREATE TABLE IF NOT EXISTS Tag (
+                CREATE TABLE IF NOT EXISTS TB_Tag (
                     tagId INTEGER PRIMARY KEY AUTOINCREMENT,         -- 태그 ID (기본 키)
                     name TEXT NOT NULL UNIQUE,                       -- 태그 이름 (중복 불가)
                     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,    -- 생성 시간
@@ -80,7 +80,7 @@ namespace Todo.DB
                 );
 
                 -- 🗂️ 카테고리 테이블: 할 일을 카테고리로 분류
-                CREATE TABLE IF NOT EXISTS Categories (
+                CREATE TABLE IF NOT EXISTS TB_Categories (
                     categoryId INTEGER PRIMARY KEY AUTOINCREMENT,    -- 카테고리 ID (기본 키)
                     name TEXT NOT NULL,                              -- 카테고리 이름
                     createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,    -- 생성 시간
@@ -88,7 +88,7 @@ namespace Todo.DB
                 );
 
                 -- 📅 할 일(Task) 테이블: 일정 및 반복 기능 포함
-                CREATE TABLE IF NOT EXISTS Task (
+                CREATE TABLE IF NOT EXISTS TB_Task (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,            -- 할 일 ID (기본 키)
                     title TEXT NOT NULL,                             -- 제목
                     description TEXT,                                -- 상세 설명
@@ -105,7 +105,7 @@ namespace Todo.DB
                 );
 
                 -- 🔔 알림 테이블: 할 일 알림 예약 정보
-                CREATE TABLE IF NOT EXISTS Notifications (
+                CREATE TABLE IF NOT EXISTS TB_Notifications (
                     notificationID INTEGER PRIMARY KEY AUTOINCREMENT, -- 알림 ID (기본 키)
                     taskId INTEGER NOT NULL,                          -- 연결된 할 일 ID (외래키 없음)
                     isSent BOOLEAN DEFAULT 0,                         -- 알림 발송 여부
