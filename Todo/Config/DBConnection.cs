@@ -71,52 +71,47 @@ namespace Todo.DB
             using (var conn = GetConnection())
             {
                 var sql = @"
-                -- 태그
+                -- 🏷️ 태그 테이블: 할 일에 태그를 붙일 때 사용
                 CREATE TABLE IF NOT EXISTS Tag (
-                    TagId INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL UNIQUE,
-                    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-                    UpdatedAt DATETIME
+                    tagId INTEGER PRIMARY KEY AUTOINCREMENT,         -- 태그 ID (기본 키)
+                    name TEXT NOT NULL UNIQUE,                       -- 태그 이름 (중복 불가)
+                    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,    -- 생성 시간
+                    updatedAt DATETIME                               -- 수정 시간
                 );
 
-                -- 카테고리
+                -- 🗂️ 카테고리 테이블: 할 일을 카테고리로 분류
                 CREATE TABLE IF NOT EXISTS Categories (
-                    CategoryId INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Name TEXT NOT NULL,
-                    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-                    UpdatedAt DATETIME
+                    categoryId INTEGER PRIMARY KEY AUTOINCREMENT,    -- 카테고리 ID (기본 키)
+                    name TEXT NOT NULL,                              -- 카테고리 이름
+                    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,    -- 생성 시간
+                    updatedAt DATETIME                               -- 수정 시간
                 );
 
-                -- 일정
+                -- 📅 할 일(Task) 테이블: 일정 및 반복 기능 포함
                 CREATE TABLE IF NOT EXISTS Task (
-                    Id INTEGER PRIMARY KEY AUTOINCREMENT,
-                    Title TEXT NOT NULL,
-                    Description TEXT,
-                    DueDate DATETIME,
-                    Priority INTEGER,
-                    IsCompleted BOOLEAN DEFAULT 0,
-                    CategoryId INTEGER,
-                    TagId INTEGER,
-                    CreatedAt DATETIME DEFAULT CURRENT_TIMESTAMP,
-                    UpdatedAt DATETIME
+                    id INTEGER PRIMARY KEY AUTOINCREMENT,            -- 할 일 ID (기본 키)
+                    title TEXT NOT NULL,                             -- 제목
+                    description TEXT,                                -- 상세 설명
+                    dueDate DATETIME,                                -- 마감일
+                    priority INTEGER,                                -- 우선순위
+                    isCompleted BOOLEAN DEFAULT 0,                   -- 완료 여부
+                    categoryId INTEGER,                              -- 카테고리 ID (외래키 없음)
+                    tagId INTEGER,                                   -- 태그 ID (외래키 없음)
+                    frequency TEXT,                                  -- 반복 주기 (예: daily, weekly)
+                    interval INTEGER DEFAULT 1,                      -- 반복 간격
+                    endDate DATETIME,                                -- 반복 종료일
+                    createdAt DATETIME DEFAULT CURRENT_TIMESTAMP,    -- 생성 시간
+                    updatedAt DATETIME                               -- 수정 시간
                 );
 
-                -- 반복 일정 테이블
-                CREATE TABLE IF NOT EXISTS RecurrenceTask (
-                    RecurrenceTaskID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    TaskId INTEGER NOT NULL,
-                    Frequency TEXT NOT NULL, -- daily, weekly, monthly, yearly 등
-                    Interval INTEGER DEFAULT 1, -- 반복 간격 (예: 2면 2주마다)
-                    EndDate DATETIME
-                );
-
-                -- 알림 테이블
+                -- 🔔 알림 테이블: 할 일 알림 예약 정보
                 CREATE TABLE IF NOT EXISTS Notifications (
-                    NotificationID INTEGER PRIMARY KEY AUTOINCREMENT,
-                    TaskId INTEGER NOT NULL,
-                    IsSent BOOLEAN DEFAULT 0,
-                    NotifyAt DATETIME NOT NULL
+                    notificationID INTEGER PRIMARY KEY AUTOINCREMENT, -- 알림 ID (기본 키)
+                    taskId INTEGER NOT NULL,                          -- 연결된 할 일 ID (외래키 없음)
+                    isSent BOOLEAN DEFAULT 0,                         -- 알림 발송 여부
+                    notifyAt DATETIME NOT NULL                        -- 알림 예정 시간
                 );
+
                 ";
 
                 using (var cmd = new SQLiteCommand(sql, conn))

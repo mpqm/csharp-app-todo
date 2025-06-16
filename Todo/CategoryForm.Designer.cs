@@ -34,13 +34,14 @@
             // buttonCategoryFormClose
             // 
             this.buttonCategoryFormClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCategoryFormClose.BackColor = System.Drawing.Color.Gray;
+            this.buttonCategoryFormClose.BackColor = System.Drawing.Color.White;
             this.buttonCategoryFormClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCategoryFormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCategoryFormClose.ForeColor = System.Drawing.Color.White;
+            this.buttonCategoryFormClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCategoryFormClose.ForeColor = System.Drawing.Color.Black;
             this.buttonCategoryFormClose.Location = new System.Drawing.Point(1192, 12);
             this.buttonCategoryFormClose.Name = "buttonCategoryFormClose";
-            this.buttonCategoryFormClose.Size = new System.Drawing.Size(70, 30);
+            this.buttonCategoryFormClose.Size = new System.Drawing.Size(50, 20);
             this.buttonCategoryFormClose.TabIndex = 0;
             this.buttonCategoryFormClose.Text = "X";
             this.buttonCategoryFormClose.UseVisualStyleBackColor = false;
@@ -50,7 +51,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 569);
             this.Controls.Add(this.buttonCategoryFormClose);
             this.Name = "CategoryForm";

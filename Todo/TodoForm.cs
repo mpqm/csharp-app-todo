@@ -15,19 +15,17 @@ namespace Todo
     {
         // 현재 선택된 메뉴 버튼
         private Button currentButton;
-        // 기본 배경색
-        private Color defaultBgColor = Color.Black;
         // 서브메뉴 기본 배경색
-        private Color defaultSubMenuBgColor = Color.DarkGray;
+        private Color defaultSubMenuBgColor = Color.White;
 
         public TodoForm()
         {
             InitializeComponent();
-            initSubMenu();
+            InitSubMenu();
         }
 
         // 서브메뉴 초기화
-        private void initSubMenu()
+        private void InitSubMenu()
         {
             panelSideSubMenuCalender.Visible = false;
             panelSideSubMenuTasks.Visible = false;
@@ -35,7 +33,7 @@ namespace Todo
         }
 
         // 서브메뉴 숨기기
-        public void hideSubMenu()
+        public void HideSubMenu()
         {
             if (panelSideSubMenuCalender.Visible == true)
                 panelSideSubMenuCalender.Visible = false;
@@ -46,11 +44,11 @@ namespace Todo
         }
 
         // 서브메뉴 표시
-        private void showSubMenu(Panel subMenu)
+        private void ShowSubMenu(Panel subMenu)
         {
             if (subMenu.Visible == false)
             {
-                hideSubMenu();
+                HideSubMenu();
                 subMenu.Visible = true;
             }
             else
@@ -64,30 +62,46 @@ namespace Todo
         {
             if (btnSender != null)
             {
+                // 모든 서브메뉴 버튼 비활성화
+                DisableAllSubMenuButtons();
+                
                 Button clickedButton = (Button)btnSender;
                 
                 // 서브 메뉴 버튼인 경우에만 배경색 변경
                 if (IsSubMenuButton(clickedButton))
                 {
-                    if (currentButton != clickedButton)
-                    {
-                        // 이전 버튼 비활성화
-                        DisableButton();
-                        
-                        // 현재 버튼 활성화
-                        currentButton = clickedButton;
-                        currentButton.BackColor = Color.Gray;
-                    }
+                    // 현재 버튼 활성화
+                    currentButton = clickedButton;
+                    currentButton.BackColor = Color.LightGray;
                 }
             }
         }
 
-        // 버튼 비활성화 메서드
-        private void DisableButton()
+        // 모든 서브메뉴 버튼 비활성화 메서드
+        private void DisableAllSubMenuButtons()
         {
-            if (currentButton != null && IsSubMenuButton(currentButton))
+            foreach (Control control in panelSideSubMenuTasks.Controls)
             {
-                currentButton.BackColor = defaultSubMenuBgColor;
+                if (control is Button button)
+                {
+                    button.BackColor = defaultSubMenuBgColor;
+                }
+            }
+            
+            foreach (Control control in panelSideSubMenuCalender.Controls)
+            {
+                if (control is Button button)
+                {
+                    button.BackColor = defaultSubMenuBgColor;
+                }
+            }
+            
+            foreach (Control control in panelSideSubMenuManage.Controls)
+            {
+                if (control is Button button)
+                {
+                    button.BackColor = defaultSubMenuBgColor;
+                }
             }
         }
 
@@ -101,7 +115,7 @@ namespace Todo
         private Form activedForm = null;
 
         // 패널에 활성화된 폼을 표시하는 변수
-        private void openFormByMenu(Form activeForm)
+        private void OpenFormByMenu(Form activeForm)
         {
             try
             {
@@ -125,18 +139,9 @@ namespace Todo
             }
         }
 
-        // 알림 유형을 정의하는 열거형
-        public enum NotificationType
-        {
-            Information,
-            Success,
-            Warning,
-            Error
-        }
-
         private void buttonSideMenuTasks_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSideSubMenuTasks);
+            ShowSubMenu(panelSideSubMenuTasks);
         }
 
         private void buttonSideMenuActiveRecuriingTask_Click(object sender, EventArgs e)
@@ -162,7 +167,7 @@ namespace Todo
         // 캘린더 서브메뉴 버튼 클릭 이벤트
         private void buttonSideMenuCalendar_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSideSubMenuCalender);
+            ShowSubMenu(panelSideSubMenuCalender);
         }
 
         private void buttonSideMenuMonthly_Click(object sender, EventArgs e)
@@ -177,17 +182,23 @@ namespace Todo
 
         private void buttonSideMenuDaily_Click(object sender, EventArgs e)
         {
-            openFormByMenu(new CalendarDailyForm());
+            OpenFormByMenu(new CalendarDailyForm());
             ActivateButton(sender);
         }
 
         // 관리 서브메뉴 버튼 클릭 이벤트
         private void buttonSideMenuManage_Click(object sender, EventArgs e)
         {
-            showSubMenu(panelSideSubMenuManage);
+            ShowSubMenu(panelSideSubMenuManage);
         }
 
-        private void buttonSideMenuSetting_Click(object sender, EventArgs e)
+        private void buttonSideMenuCategory_Click(object sender, EventArgs e)
+        {
+            OpenFormByMenu(new CategoryForm());
+            ActivateButton(sender);
+        }
+
+        private void buttonSideMenuTag_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
@@ -197,17 +208,15 @@ namespace Todo
             ActivateButton(sender);
         }
 
-        private void buttonSideMenuCategory_Click(object sender, EventArgs e)
-        {
-            openFormByMenu(new CategoryForm());
-            ActivateButton(sender);
-        }
-
-        private void buttonSideMenuRecurrenceRule_Click(object sender, EventArgs e)
+        private void buttonSideMenuExport_Click(object sender, EventArgs e)
         {
             ActivateButton(sender);
         }
 
+        private void buttonSideMenuSetting_Click(object sender, EventArgs e)
+        {
+            ActivateButton(sender);
+        }
 
     }
 }

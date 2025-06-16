@@ -37,7 +37,7 @@ namespace Todo
         private void buttonCategoryFormClose_Click(object sender, EventArgs e)
         {
             // 부모 폼(TodoForm) submenu 숨기기
-            if (this.ParentForm is TodoForm todoForm) todoForm.hideSubMenu();
+            if (this.ParentForm is TodoForm todoForm) todoForm.HideSubMenu();
             this.Close();
         }
     }

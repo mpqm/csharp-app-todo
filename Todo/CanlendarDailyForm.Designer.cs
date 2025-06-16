@@ -1,4 +1,4 @@
-﻿namespace todo
+﻿namespace Todo
 {
     partial class CalendarDailyForm
     {
@@ -34,13 +34,14 @@
             // buttonCalendarDailyFormClose
             // 
             this.buttonCalendarDailyFormClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.buttonCalendarDailyFormClose.BackColor = System.Drawing.Color.Gray;
+            this.buttonCalendarDailyFormClose.BackColor = System.Drawing.Color.White;
             this.buttonCalendarDailyFormClose.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCalendarDailyFormClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCalendarDailyFormClose.ForeColor = System.Drawing.Color.White;
+            this.buttonCalendarDailyFormClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCalendarDailyFormClose.ForeColor = System.Drawing.Color.Black;
             this.buttonCalendarDailyFormClose.Location = new System.Drawing.Point(1192, 12);
             this.buttonCalendarDailyFormClose.Name = "buttonCalendarDailyFormClose";
-            this.buttonCalendarDailyFormClose.Size = new System.Drawing.Size(70, 30);
+            this.buttonCalendarDailyFormClose.Size = new System.Drawing.Size(50, 20);
             this.buttonCalendarDailyFormClose.TabIndex = 1;
             this.buttonCalendarDailyFormClose.Text = "X";
             this.buttonCalendarDailyFormClose.UseVisualStyleBackColor = false;
@@ -50,7 +51,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Gray;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1274, 569);
             this.Controls.Add(this.buttonCalendarDailyFormClose);
             this.Name = "CalendarDailyForm";

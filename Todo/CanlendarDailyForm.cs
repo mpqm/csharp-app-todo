@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Todo;
 
-namespace todo
+namespace Todo
 {
     public partial class CalendarDailyForm : Form
     {
@@ -38,7 +38,7 @@ namespace todo
         private void buttonCalendarDailyFormClose_Click(object sender, EventArgs e)
         {
             // 부모 폼(TodoForm) submenu 숨기기
-            if (this.ParentForm is TodoForm todoForm) todoForm.hideSubMenu();
+            if (this.ParentForm is TodoForm todoForm) todoForm.HideSubMenu();
             this.Close();
         }
     }
